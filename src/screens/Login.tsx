@@ -97,7 +97,7 @@ const Login: React.FC<Props> = ({navigation}) => {
           <Pressable
             style={styles.modalContent}
             onPress={e => e.stopPropagation()}>
-            <Text style={styles.modalTitle}>Select Language</Text>
+            <Text style={styles.modalTitle}>{t('chooseLanguage')}</Text>
 
             <TouchableOpacity
               onPress={async () => {
