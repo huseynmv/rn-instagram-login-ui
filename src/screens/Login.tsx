@@ -1,8 +1,10 @@
 import {
   Image,
+  KeyboardAvoidingView,
   Modal,
   Pressable,
   SafeAreaView,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -28,6 +30,7 @@ const Login: React.FC<Props> = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ flexGrow: 1 }}>
       <View style={{flex: 2}}>
         <TouchableOpacity
           style={styles.languageContainer}
@@ -116,6 +119,7 @@ const Login: React.FC<Props> = ({navigation}) => {
           </Pressable>
         </Pressable>
       </Modal>
+      </ScrollView>
     </SafeAreaView>
   );
 };
@@ -129,6 +133,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 22,
     paddingTop: 66,
+
   },
   language: {
     textAlign: 'center',
